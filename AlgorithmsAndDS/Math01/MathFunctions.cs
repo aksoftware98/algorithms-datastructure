@@ -60,7 +60,43 @@ namespace Math01
         // Very effiecient solution to detect the prime factor of a number
         public static void PrintPrimeFactorsQuickly(int number)
         {
+            if (number <= 1)
+            {
+                Console.WriteLine("Number doesn't have prime factors");
+                return; 
+            }
 
+            while (number % 2 == 0)
+            {
+                Console.Write($"2 ");
+                number = number / 2; 
+            }
+
+            while (number % 3 == 0)
+            {
+                Console.Write("3 ");
+                number = number / 3;
+            }
+
+            for (int i = 5; i * i <= number; i += 6)
+            {
+                while (number % i == 0)
+                {
+                    Console.Write($"{i} ");
+                    number = number / i;
+                }
+
+                while (number % (i + 2) == 0)
+                {
+                    Console.WriteLine($"{i} ");
+                    number = number / (i + 2);
+                }
+            }
+
+            if (number > 3)
+                Console.WriteLine($"{number} ");
+            else
+                Console.WriteLine();
         }
         #endregion 
     }

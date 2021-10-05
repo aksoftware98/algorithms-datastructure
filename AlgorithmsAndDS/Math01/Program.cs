@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace Math01
 {
@@ -6,8 +7,17 @@ namespace Math01
     {
         public static void Main(string[] args)
         {
-            MathFunctions.PrintPrimeFactors(450);
-            MathFunctions.PrintPrimeFactors(84);
+            var stopwatch = new Stopwatch();
+            stopwatch.Start(); 
+            MathFunctions.PrintPrimeFactors(45000000);
+            stopwatch.Stop();
+            Console.WriteLine($"{stopwatch.ElapsedMilliseconds}");
+            stopwatch.Reset();
+            stopwatch = new Stopwatch();
+            stopwatch.Start();
+            MathFunctions.PrintPrimeFactors(45000000);
+            stopwatch.Stop();
+            Console.WriteLine($"{stopwatch.ElapsedMilliseconds}");
             Console.WriteLine("Hello World!");
         }
     }
