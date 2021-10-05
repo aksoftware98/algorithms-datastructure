@@ -1,4 +1,6 @@
-﻿namespace Math01
+﻿using System;
+
+namespace Math01
 {
     public class MathFunctions
     {
@@ -27,6 +29,38 @@
             }
 
             return true;
+        }
+        #endregion
+
+        #region Prime Factor
+        // Good solution to find the prime factors
+        public static void PrintPrimeFactors(int number)
+        {
+            if (number <= 1)
+            {
+                Console.WriteLine("Not prime factors");
+                return;
+            }
+
+            for (int i = 2; i * i <= number; i++)
+            {
+                while (number % i == 0)
+                {
+                    Console.Write($"{i} ");
+                    number = number / i;
+                }
+            }
+
+            if (number > 1)
+                Console.WriteLine(number);
+            else
+                Console.WriteLine();
+        }
+
+        // Very effiecient solution to detect the prime factor of a number
+        public static void PrintPrimeFactorsQuickly(int number)
+        {
+
         }
         #endregion 
     }
