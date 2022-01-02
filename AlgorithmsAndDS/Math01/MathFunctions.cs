@@ -98,6 +98,27 @@ namespace Math01
             else
                 Console.WriteLine();
         }
+        #endregion
+
+        #region Ordered Divisors 
+        /// <summary>
+        /// Opmtimzed function to print all the divisors of a number in a ascending order
+        /// </summary>
+        /// <param name="n"></param>
+        public static void PrintDivisorsInOrder(int n)
+        {
+            int i = 0;
+            for (i = 1; i * i < n; i++)
+            {
+                if (n % i == 0)
+                    Console.WriteLine(i);
+            }
+            for(; i >= 1; i--)
+            {
+                if (n % i == 0)
+                    Console.WriteLine(n / i);
+            }
+        }
         #endregion 
     }
 }

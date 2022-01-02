@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.810.10
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.31911.260
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Math01", "Math01\Math01.csproj", "{887973F8-3AD0-40CE-8965-51A810041636}"
 EndProject
@@ -11,8 +11,8 @@ Global
 		Release|anycpu = Release|anycpu
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{887973F8-3AD0-40CE-8965-51A810041636}.Debug|anycpu.ActiveCfg = Debug|anycpu
-		{887973F8-3AD0-40CE-8965-51A810041636}.Debug|anycpu.Build.0 = Debug|anycpu
+		{887973F8-3AD0-40CE-8965-51A810041636}.Debug|anycpu.ActiveCfg = Debug|Any CPU
+		{887973F8-3AD0-40CE-8965-51A810041636}.Debug|anycpu.Build.0 = Debug|Any CPU
 		{887973F8-3AD0-40CE-8965-51A810041636}.Release|anycpu.ActiveCfg = Release|anycpu
 		{887973F8-3AD0-40CE-8965-51A810041636}.Release|anycpu.Build.0 = Release|anycpu
 	EndGlobalSection
