@@ -119,6 +119,104 @@ namespace Math01
                     Console.WriteLine(n / i);
             }
         }
+        #endregion
+
+        #region Power
+        /// <summary>
+        /// Calculate the power of number
+        /// </summary>
+        /// <param name="n">Basic number</param>
+        /// <param name="power">The number of power</param>
+        /// <returns></returns>
+        public static decimal Power(int x, int n)
+        {
+            if (n == 0)
+                return 1;
+
+            if (n == 1)
+                return x;
+
+            // check if n is odd 
+            if (n % 2 == 0)
+            {
+                return Power(x, n / 2) * Power(x, n / 2); 
+            }
+            else
+            {
+                return Power(x, n / 2) * Power(x, n / 2) * x; 
+            }
+        }
+
+        public static decimal PowerIterative(int x, int n)
+        {
+            if (n == 0)
+                return 1;
+
+            decimal result = x;
+            while (n > 0)
+            {
+                if (n % 2 != 0)
+                    result *= 0;
+            }
+
+            return 0;
+        }
+        #endregion
+
+        #region 
+        public static void Shit()
+        {
+            static void EatThink()
+            {
+                int i = 1;
+                // philisophers status 
+                var p = new int[] { 0, 0, 0, 0, 0 };
+                var c = new int[] { 0, 0, 0, 0, 0 };
+                // new sempahorm array ; 
+
+                // 0 = hungry 
+                // 1 = eating 
+                // 2 = thinking
+
+                do
+                {
+                    // i is odd
+                    if (i % 2 != 0)
+                    {
+                        if (p[i] == 0) // hungry 
+                        {
+                            // Get the left chopstick 
+                            var left = c[i];  // wait()
+                            var right = c[(i + 1) % 5]; // wait ()
+                         
+                            // Change philispher status to eating 
+                            p[i] = 1;
+                            // Eat 
+
+                            // release c[i] & c[(i + 1) % 5]
+                        }
+                    }
+
+                    // i is even 
+                    else
+                    {
+                        if (p[i] == 0) // hungry 
+                        {
+                            // Get the left chopstick 
+                            var right = c[i];  // wait()
+                            var left = c[i + 1]; // wait ()
+
+                            // Change philispher status to eating 
+                            p[i] = 1;
+                            // Eat 
+
+                            // release c[i] & c[(i + 1)]
+                        }
+                    }
+                    
+                } while (true);
+            }
+        }
         #endregion 
     }
 }
