@@ -28,9 +28,9 @@ namespace Math01
             //stopwatch.Stop();
             //Console.WriteLine(stopwatch.ElapsedMilliseconds);
 
+            Console.WriteLine(BitMagic.CountSetBitsSimple(13));
+            Console.WriteLine(BitMagic.CountSetBitsUsingBitwise(13));
 
-            EatThink();
-            
             Console.WriteLine("Hello World!");
         }
 
