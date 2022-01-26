@@ -27,10 +27,10 @@ namespace Math01
             ////Console.WriteLine(MathFunctions.Power(20, 20)); // Expect 32 
             //stopwatch.Stop();
             //Console.WriteLine(stopwatch.ElapsedMilliseconds);
-
+            Console.WriteLine(~(3 - 1));
             Console.WriteLine(BitMagic.CountSetBitsSimple(13));
             Console.WriteLine(BitMagic.CountSetBitsUsingBitwise(13));
-
+            Console.WriteLine(BitMagic.OddNumberFrequencyInArray(new[] { 1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, }));
             Console.WriteLine("Hello World!");
         }
 

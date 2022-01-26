@@ -70,9 +70,24 @@
         {
             int result = 0;
          
-
-
             return result;
+        }
+
+        /// <summary>
+        /// Get the odd frequency of a number in the array 
+        /// </summary>
+        /// <param name="numbers">Array of numbers</param>
+        /// <returns></returns>
+        public static int OddNumberFrequencyInArray(int[] numbers)
+        {
+            var result = 0; 
+
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                result = result ^ numbers[i];
+            }
+
+            return result; 
         }
     }
 }
