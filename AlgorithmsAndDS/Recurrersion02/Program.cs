@@ -12,8 +12,10 @@ Console.WriteLine("Hello, World!");
 //}
 
 // Check out first 
-Console.WriteLine("Set a number");
-int? number = Convert.ToInt32(Console.ReadLine());
-var result = Recurrersion02.RecurresionSolutions.CalculateDigitsSum(number.Value);
-Console.WriteLine(result);
+//Console.WriteLine("Set a number");
+//int? number = Convert.ToInt32(Console.ReadLine());
+//var result = Recurrersion02.RecurresionSolutions.CalculateDigitsSum(number.Value);
+//Console.WriteLine(result);
+
+Console.WriteLine(Recurrersion02.RecurresionSolutions.RopeMaximumPieces(23, 11, 12, 9));
 

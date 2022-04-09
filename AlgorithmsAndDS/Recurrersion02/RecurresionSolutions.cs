@@ -88,6 +88,26 @@ namespace Recurrersion02
             return lastDigit + CalculateDigitsSum(n / 10);
 
         }
+
+        public static int RopeMaximumPieces(int n, int a, int b, int c)
+        {
+            if (n == 0)
+                return 0;
+            if (n < 0)
+                return -1;
+
+            int aLength = RopeMaximumPieces(n - a, a, b, c);
+            int bLength = RopeMaximumPieces(n - b, a, b, c);
+            int cLenth = RopeMaximumPieces(n - c, a, b, c);
+
+            var max = new[] { aLength, bLength, cLenth }.Max();
+
+            if (max == -1)
+                return -1;
+
+            return max + 1;
+
+        }
         #endregion 
     }
 }
