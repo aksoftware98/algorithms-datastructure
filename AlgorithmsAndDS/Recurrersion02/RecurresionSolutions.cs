@@ -25,6 +25,10 @@ namespace Recurrersion02
         #endregion
 
         #region Output check
+        /// <summary>
+        ///  4 3 2 1 1 2 3 4 
+        /// </summary>
+        /// <param name="number"></param>
         public static void Fun1(int number)
         {
             if (number == 0)
@@ -33,6 +37,17 @@ namespace Recurrersion02
             Console.WriteLine(number);
             Fun1(number - 1);
             Console.WriteLine(number);
+        }
+
+
+        public static void Fun2(int number)
+        {
+            if (number == 0)
+                return;
+
+            Fun2(number - 1);
+            Console.WriteLine(number);
+            Fun2(number - 1);
         }
 
         #endregion 
