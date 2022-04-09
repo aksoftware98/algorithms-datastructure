@@ -50,6 +50,14 @@ namespace Recurrersion02
             Fun2(number - 1);
         }
 
+        public static int Fun3(int number)
+        {
+            if (number == 1)
+                return 0;
+
+            return 1 + Fun3(number / 2);
+        }
+
         #endregion 
     }
 }
