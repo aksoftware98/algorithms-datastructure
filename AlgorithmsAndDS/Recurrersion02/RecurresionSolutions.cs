@@ -77,6 +77,17 @@ namespace Recurrersion02
 
             return n + SumNumber(n - 1);
         }
+
+        // Calculate the total sum of a digits 
+        public static int CalculateDigitsSum(int n)
+        {
+            if (n == 0)
+                return 0;
+
+            var lastDigit = n % 10;
+            return lastDigit + CalculateDigitsSum(n / 10);
+
+        }
         #endregion 
     }
 }
