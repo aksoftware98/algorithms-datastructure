@@ -69,6 +69,14 @@ namespace Recurrersion02
             Console.WriteLine(number % 2);
         }
 
+        // Calcualte the sum of all the numbers for a natural number
+        public static int SumNumber(int n)
+        {
+            if (n == 0)
+                return 0;
+
+            return n + SumNumber(n - 1);
+        }
         #endregion 
     }
 }

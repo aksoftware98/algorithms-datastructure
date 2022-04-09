@@ -14,4 +14,5 @@ Console.WriteLine("Hello, World!");
 // Check out first 
 Console.WriteLine("Set a number");
 int? number = Convert.ToInt32(Console.ReadLine());
-Recurrersion02.RecurresionSolutions.Fun4(number.Value); 
+var result = Recurrersion02.RecurresionSolutions.SumNumber(number.Value);
+Console.WriteLine(result);
