@@ -50,12 +50,23 @@ namespace Recurrersion02
             Fun2(number - 1);
         }
 
+        // Calcualte the log of 2 Log2 => 16 = 4 , 8 = 3 
         public static int Fun3(int number)
         {
             if (number == 1)
                 return 0;
 
             return 1 + Fun3(number / 2);
+        }
+
+        // Print the binary represetnation 
+        public static void Fun4(int number)
+        {
+            if (number == 0)
+                return;
+
+            Fun4(number / 2);
+            Console.WriteLine(number % 2);
         }
 
         #endregion 
