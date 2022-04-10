@@ -69,6 +69,9 @@ namespace Recurrersion02
             Console.WriteLine(number % 2);
         }
 
+        #endregion
+
+
         // Calcualte the sum of all the numbers for a natural number
         public static int SumNumber(int n)
         {
@@ -108,6 +111,24 @@ namespace Recurrersion02
             return max + 1;
 
         }
-        #endregion 
+
+        /// <summary>
+        /// Print All possible chart sets from a basic string 
+        /// ABC = A  B C AB AC BC ABC
+        /// </summary>
+        /// <param name="str"></param>
+        /// <param name="current"></param>
+        /// <param name="i"></param>
+        public static void PrintAllPossibleChartSets(string str, string current = "", int i = 0)
+        {
+            if (i == str.Length)
+            {
+                Console.WriteLine(current);
+                return; 
+            }
+
+            PrintAllPossibleChartSets(str, current, i + 1);
+            PrintAllPossibleChartSets(str, current + str[i], i + 1);
+        }
     }
 }

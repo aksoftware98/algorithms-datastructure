@@ -17,5 +17,6 @@ Console.WriteLine("Hello, World!");
 //var result = Recurrersion02.RecurresionSolutions.CalculateDigitsSum(number.Value);
 //Console.WriteLine(result);
 
-Console.WriteLine(Recurrersion02.RecurresionSolutions.RopeMaximumPieces(23, 11, 12, 9));
+//Console.WriteLine(Recurrersion02.RecurresionSolutions.RopeMaximumPieces(23, 11, 12, 9));
+Recurrersion02.RecurresionSolutions.PrintAllPossibleChartSets("ABC");
 
