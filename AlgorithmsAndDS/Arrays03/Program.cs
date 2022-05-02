@@ -3,6 +3,7 @@ Console.WriteLine("Hello, World!");
 var array = new[] { 10, 12,0, 42, 41, 0, 11, 1, 42, 4 };
 var array2 = new[] { 10, 12, 42, 41, 11, 1, 42, 4 };
 MoveZerosToEnd2(array);
+RotateArrayByOne(array);
 Array.Sort(array2);
 RemoveDublicates2(array2);
 Max(array);
@@ -158,4 +159,15 @@ static void MoveZerosToEnd2(int[] array)
     PrintArray(array);
 }
 
+static void RotateArrayByOne(int[] array)
+{
+    int firstElement = array[0];
+    for (int i = 1; i < array.Length; i++)
+    {
+        array[i - 1] = array[i];
+    }
+
+    array[array.Length - 1] = firstElement;
+    PrintArray(array);
+}
 #endregion 
