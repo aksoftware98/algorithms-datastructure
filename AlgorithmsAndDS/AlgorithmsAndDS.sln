@@ -5,7 +5,9 @@ VisualStudioVersion = 17.1.31911.260
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Math01", "Math01\Math01.csproj", "{887973F8-3AD0-40CE-8965-51A810041636}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recurrersion02", "Recurrersion02\Recurrersion02.csproj", "{2454ED30-E479-4BDD-ABD4-E5375DB53CA4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recurrersion02", "Recurrersion02\Recurrersion02.csproj", "{2454ED30-E479-4BDD-ABD4-E5375DB53CA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays03", "Arrays03\Arrays03.csproj", "{22078B39-09E6-4171-97CB-EB1349C03A17}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{2454ED30-E479-4BDD-ABD4-E5375DB53CA4}.Debug|anycpu.Build.0 = Debug|Any CPU
 		{2454ED30-E479-4BDD-ABD4-E5375DB53CA4}.Release|anycpu.ActiveCfg = Release|Any CPU
 		{2454ED30-E479-4BDD-ABD4-E5375DB53CA4}.Release|anycpu.Build.0 = Release|Any CPU
+		{22078B39-09E6-4171-97CB-EB1349C03A17}.Debug|anycpu.ActiveCfg = Debug|Any CPU
+		{22078B39-09E6-4171-97CB-EB1349C03A17}.Debug|anycpu.Build.0 = Debug|Any CPU
+		{22078B39-09E6-4171-97CB-EB1349C03A17}.Release|anycpu.ActiveCfg = Release|Any CPU
+		{22078B39-09E6-4171-97CB-EB1349C03A17}.Release|anycpu.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
