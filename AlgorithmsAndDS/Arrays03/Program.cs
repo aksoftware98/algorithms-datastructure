@@ -1,7 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");
-var array = new[] { 10, 12, 42, 41, 11, 1, 42, 4 };
+var array = new[] { 10, 12,0, 42, 41, 0, 11, 1, 42, 4 };
 var array2 = new[] { 10, 12, 42, 41, 11, 1, 42, 4 };
+MoveZerosToEnd2(array);
 Array.Sort(array2);
 RemoveDublicates2(array2);
 Max(array);
@@ -122,4 +123,39 @@ static void PrintArray(int[] array)
 
     Console.WriteLine();
 }
+
+static void MoveZerosToEnd(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] == 0)
+        {
+            array[array.Length - 1] = 0;
+            for (int j = i; j < array.Length - 1; j++)
+            {
+                array[j] = array[j + 1];
+            }
+        }
+    }
+
+    PrintArray(array);
+}
+
+static void MoveZerosToEnd2(int[] array)
+{
+    int count = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] != 0)
+        {
+            int currentI = array[i];
+            int currentCount = array[count];
+            array[count] = currentI;
+            array[i] = currentCount;
+            count++;
+        }
+    }
+    PrintArray(array);
+}
+
 #endregion 
