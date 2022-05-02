@@ -18,5 +18,9 @@ Console.WriteLine("Hello, World!");
 //Console.WriteLine(result);
 
 //Console.WriteLine(Recurrersion02.RecurresionSolutions.RopeMaximumPieces(23, 11, 12, 9));
-Recurrersion02.RecurresionSolutions.PrintAllPossibleChartSets("ABC");
+//Recurrersion02.RecurresionSolutions.PrintAllPossibleChartSets("ABC");
+Recurrersion02.RecurresionSolutions.PrintSubsetSum(new[]
+{
+    10, 2, 6, 5, 3
+}, 8);
 

@@ -130,5 +130,20 @@ namespace Recurrersion02
             PrintAllPossibleChartSets(str, current, i + 1);
             PrintAllPossibleChartSets(str, current + str[i], i + 1);
         }
+
+        public static void PrintSubsetSum(int[] array, int sum)
+        {
+            Console.WriteLine(SubsetSumCount(array, array.Length - 1, sum));
+        }
+
+        public static int SubsetSumCount(int[] array, int index, int sum)
+        {
+            if (index == 0)
+                return sum == 0 ? 1 : 0;
+
+            return SubsetSumCount(array, index - 1, sum) + SubsetSumCount(array, index - 1, sum - array[index - 1]);
+
+
+        }
     }
 }
