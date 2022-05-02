@@ -3,11 +3,11 @@ Console.WriteLine("Hello, World!");
 var array = new[] { 10, 12, 42, 41, 11, 1, 42, 4 };
 var array2 = new[] { 10, 12, 42, 41, 11, 1, 42, 4 };
 Array.Sort(array2);
+RemoveDublicates2(array2);
 Max(array);
 SecondMax(array);
 IsSorted(array2);
 ReverseArray(array);
-
 Console.ReadKey();
 
 #region Methods
@@ -72,5 +72,54 @@ static void ReverseArray(int[] array)
     }
 
     Console.WriteLine("Reveresed");
+}
+
+static void RemoveDublicates(int[] array)
+{
+    int[] newArray = new int[array.Length];
+
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (!Contains(newArray, array[i]))
+            newArray[i] = array[i];
+    }
+
+    foreach (var item in newArray)
+    {
+        Console.Write($"{item} ");
+    }
+    Console.WriteLine();
+}
+
+static bool Contains(int[] array, int number)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] == number)
+            return true; 
+    }
+
+    return false; 
+}
+
+static void RemoveDublicates2(int[] array)
+{
+    for (int i = 1; i < array.Length; i++)
+    {
+        if (array[i] - array[i - 1] == 0)
+            array[i] = 0;
+    }
+
+    PrintArray(array);
+}
+
+static void PrintArray(int[] array)
+{
+    foreach (var item in array)
+    {
+        Console.Write($"{item}\t");
+    }
+
+    Console.WriteLine();
 }
 #endregion 
