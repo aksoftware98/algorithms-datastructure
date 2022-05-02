@@ -6,6 +6,7 @@ Array.Sort(array2);
 Max(array);
 SecondMax(array);
 IsSorted(array2);
+ReverseArray(array);
 
 Console.ReadKey();
 
@@ -61,5 +62,15 @@ static void IsSorted(int[] array)
     }
 
     Console.WriteLine($"Is Sorted {isSorted}");
+}
+
+static void ReverseArray(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = array[array.Length - i - 1];
+    }
+
+    Console.WriteLine("Reveresed");
 }
 #endregion 
