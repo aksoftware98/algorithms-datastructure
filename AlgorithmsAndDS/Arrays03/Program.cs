@@ -2,6 +2,7 @@
 Console.WriteLine("Hello, World!");
 var array = new[] { 10, 12,0, 42, 41, 0, 11, 1, 42, 4 };
 var array2 = new[] { 10, 12, 42, 41, 11, 1, 42, 4 };
+RotateArrayByX(array, 2);
 MoveZerosToEnd2(array);
 RotateArrayByOne(array);
 Array.Sort(array2);
@@ -168,6 +169,23 @@ static void RotateArrayByOne(int[] array)
     }
 
     array[array.Length - 1] = firstElement;
+    PrintArray(array);
+}
+
+static void RotateArrayByX(int[] array, int d)
+{
+    var firstNumbers = new int[d];
+    for (int i = 0; i < d; i++)
+        firstNumbers[i] = array[i];
+
+    for (int i = d; i < array.Length; i++)
+    {
+        array[i - d] = array[i];
+    }
+
+    for (int i = 0; i < d; i++)
+        array[array.Length - d + i] = firstNumbers[i];
+
     PrintArray(array);
 }
 #endregion 
