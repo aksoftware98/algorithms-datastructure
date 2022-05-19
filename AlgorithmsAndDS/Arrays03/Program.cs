@@ -1,8 +1,10 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");
-var array = new[] { 10, 12,0, 42, 41, 0, 11, 1, 42, 4 };
+var array = new[] { 10, 12,0, 42, 41, 0, 11, 110, 42, 4 };
 var array2 = new[] { 10, 12, 42, 41, 11, 1, 42, 4 };
+var array3 = new[] { 2, 3, 10, 6, 4, 8, 1 };
 RotateArrayByX(array, 2);
+MaximumDifferenceWithOrder(array3);
 MoveZerosToEnd2(array);
 RotateArrayByOne(array);
 Array.Sort(array2);
@@ -187,5 +189,19 @@ static void RotateArrayByX(int[] array, int d)
         array[array.Length - d + i] = firstNumbers[i];
 
     PrintArray(array);
+}
+
+static void MaximumDifferenceWithOrder(int[] array)
+{
+    int maximumDifference = 0;
+    for (int i = 0; i < array.Length - 1; i++)
+    {
+        var difference = array[i + 1] - array[i];
+        if (difference > maximumDifference)
+            maximumDifference = difference;
+    }
+
+    Console.WriteLine($"Max Difference is {maximumDifference}");
+
 }
 #endregion 
