@@ -7,7 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Math01", "Math01\Math01.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recurrersion02", "Recurrersion02\Recurrersion02.csproj", "{2454ED30-E479-4BDD-ABD4-E5375DB53CA4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays03", "Arrays03\Arrays03.csproj", "{22078B39-09E6-4171-97CB-EB1349C03A17}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arrays03", "Arrays03\Arrays03.csproj", "{22078B39-09E6-4171-97CB-EB1349C03A17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Search04", "Search04\Search04.csproj", "{53864FF4-2264-4F9E-8F7E-1AE51ADEE3E5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{22078B39-09E6-4171-97CB-EB1349C03A17}.Debug|anycpu.Build.0 = Debug|Any CPU
 		{22078B39-09E6-4171-97CB-EB1349C03A17}.Release|anycpu.ActiveCfg = Release|Any CPU
 		{22078B39-09E6-4171-97CB-EB1349C03A17}.Release|anycpu.Build.0 = Release|Any CPU
+		{53864FF4-2264-4F9E-8F7E-1AE51ADEE3E5}.Debug|anycpu.ActiveCfg = Debug|Any CPU
+		{53864FF4-2264-4F9E-8F7E-1AE51ADEE3E5}.Debug|anycpu.Build.0 = Debug|Any CPU
+		{53864FF4-2264-4F9E-8F7E-1AE51ADEE3E5}.Release|anycpu.ActiveCfg = Release|Any CPU
+		{53864FF4-2264-4F9E-8F7E-1AE51ADEE3E5}.Release|anycpu.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
