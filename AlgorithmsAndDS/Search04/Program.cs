@@ -34,4 +34,31 @@ static int BinarySearch(int[] array, int number)
     
     return -1; 
 }
+#endregion
+
+#region First Recurrecne of an element in array 
+#region Recurrsive 
+static int FirstRecurrenceRecusrive(int[] array, int low, int height, int x)
+{
+    if (low > height)
+        return -1;
+
+    int mid = (low + height) / 2; 
+    if (array[mid] > x)
+    {
+        return FirstRecurrenceRecusrive(array, low, mid - 1, x);
+    }
+    else if (array[mid] < x)
+    {
+        return FirstRecurrenceRecusrive(array, mid + 1, height, x);
+    }
+    else
+    {
+        if (mid == 0 || array[mid - 1] != x)
+            return mid;
+        else
+            return FirstRecurrenceRecusrive(array, low, mid - 1, x);
+    }
+}
 #endregion 
+#endregion
