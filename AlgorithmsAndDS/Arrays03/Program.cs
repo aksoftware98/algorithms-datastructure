@@ -1,18 +1,24 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");
-var array = new[] { 10, 12,0, 42, 41, 0, 11, 110, 42, 4 };
-var array2 = new[] { 10, 12, 42, 41, 11, 1, 42, 4 };
-var array3 = new[] { 2, 3, 10, 6, 4, 8, 1 };
-RotateArrayByX(array, 2);
-MaximumDifferenceWithOrder(array3);
-MoveZerosToEnd2(array);
-RotateArrayByOne(array);
-Array.Sort(array2);
-RemoveDublicates2(array2);
-Max(array);
-SecondMax(array);
-IsSorted(array2);
-ReverseArray(array);
+// var array = new[] { 10, 12,0, 42, 41, 0, 11, 110, 42, 4 };
+// var array2 = new[] { 10, 12, 42, 41, 11, 1, 42, 4 };
+// var array3 = new[] { 2, 3, 10, 6, 4, 8, 1 };
+// RotateArrayByX(array, 2);
+// MaximumDifferenceWithOrder(array3);
+// MoveZerosToEnd2(array);
+// RotateArrayByOne(array);
+// Array.Sort(array2);
+// RemoveDublicates2(array2);
+// Max(array);
+// SecondMax(array);
+// IsSorted(array2);
+// ReverseArray(array);
+// Console.ReadKey();
+
+// Tapping Water 
+TappingRainWater(new[] { 2, 0, 2 });
+TappingRainWater(new[] { 3, 0, 1, 2, 5, 0 , 2 });
+
 Console.ReadKey();
 
 #region Methods
@@ -203,5 +209,70 @@ static void MaximumDifferenceWithOrder(int[] array)
 
     Console.WriteLine($"Max Difference is {maximumDifference}");
 
+}
+#endregion 
+
+#region Stock buy and sell problem 
+static void StockBuyAndSell(int[] prices)
+{
+    int profits = 0; 
+
+    for(int i = 1; i < prices.Length;i++)
+    {
+        if (prices[i] > prices[i - 1])
+        {
+            profits += prices[i] - prices[i - 1];
+        }
+    }
+}
+#endregion 
+
+#region Tapping Rain Water 
+static void TappingRainWater(int[] waters)
+{
+    if (waters.Length < 3)
+    {
+        Console.WriteLine("Cannot handle anything");
+        return; 
+    }
+
+    int waterBlocks = 0; 
+    int tempBlocks = 0; 
+    int lastMaxLeft = 0;
+    int lastMaxRight = 0; 
+    bool isCollecting = false; 
+    for(int i = 0; i < waters.Length; i++)
+    {
+        if (i == 0 && waters[i] == 0)
+            continue; 
+
+        if (!isCollecting)
+        {
+            isCollecting = true; 
+            if (i == 0)
+            {
+                lastMaxLeft = waters[i];
+                continue;
+            }
+        }
+        else
+        {
+            if (waters[i] < lastMaxLeft)
+            {
+                tempBlocks += lastMaxLeft - waters[i];
+            }
+            else
+            {
+                lastMaxRight = waters[i]; 
+                isCollecting = false; 
+                waterBlocks += tempBlocks; 
+                lastMaxLeft = lastMaxRight;
+                tempBlocks = 0; 
+            }
+        }
+        
+    }
+
+    Console.WriteLine($"Maximum collected water is {waterBlocks}");
 }
 #endregion 
